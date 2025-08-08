@@ -12,6 +12,11 @@ html { scroll-behavior: smooth; }
   * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
 
+@media (max-width: 768px) {
+  .table thead { position: static; }
+}
+
+
 body {
   @apply bg-base-light text-slate-900 dark:bg-base-dark dark:text-slate-100 font-sans;
 }
@@ -32,8 +37,13 @@ body {
 
 .nav-sticky { @apply sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-800; }
 
+/* Table helpers */
 .table { @apply w-full text-left text-sm; }
-.table thead { @apply sticky top-[56px] bg-white/80 dark:bg-slate-900/80 backdrop-blur z-10; }
+.table thead {
+  /* was: bg-white/80 dark:bg-slate-900/80 */
+  @apply sticky top-[56px] bg-white dark:bg-slate-900 backdrop-blur z-10;
+}
+
 .table th, .table td { @apply px-3 py-2; }
 .table tbody tr:nth-child(odd) { @apply bg-slate-50/40 dark:bg-slate-800/30; }
 
