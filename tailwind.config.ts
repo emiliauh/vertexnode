@@ -18,8 +18,8 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui"],
-        mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular"]
+        sans: ["var(--font-sans)"],
+        mono: ["var(--font-mono)"],
       },
       borderRadius: {
         xl: "1rem",
