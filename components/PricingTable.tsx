@@ -15,14 +15,14 @@ export function PricingTable() {
         <a href="#contact" className="btn btn-ghost">Need custom?</a>
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto relative">
         <table className="table">
           <thead>
             <tr>
               <th>Plan</th><th>vCPU</th><th>RAM</th><th>NVMe SSD</th><th>Bandwidth</th><th>Port</th><th>Price</th><th></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="relative z-0">
             {plans.map((p) => {
               const price = mode === 'monthly' ? `$${p.monthly}/mo` : `$${hourlyFromMonthly(p.monthly)}/hr`;
               return (
