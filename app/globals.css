@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+body {
+  @apply bg-base-light text-slate-900 dark:bg-base-dark dark:text-slate-100 font-sans;
+}
+
+.container-tight { @apply mx-auto max-w-6xl px-4; }
+.section { @apply container-tight py-16 md:py-24; }
+.h1 { @apply text-3xl md:text-5xl font-semibold tracking-tight; }
+.h2 { @apply text-2xl md:text-3xl font-semibold tracking-tight; }
+.h3 { @apply text-xl md:text-2xl font-medium tracking-tight; }
+.lead { @apply text-base md:text-lg text-slate-600 dark:text-slate-300; max-width: 75ch; }
+.mono { @apply font-mono text-sm; }
+.muted { @apply text-slate-500 dark:text-slate-400; }
+.card { @apply rounded-2xl border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 shadow-soft backdrop-blur; }
+.btn { @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition duration-normal outline-none focus-visible:ring-2 focus-visible:ring-accent; }
+.btn-primary { @apply bg-accent text-white hover:opacity-90 active:opacity-80; }
+.btn-ghost { @apply bg-transparent border border-slate-300 dark:border-slate-700 hover:bg-slate-100/60 dark:hover:bg-slate-800/60; }
+.badge { @apply inline-flex items-center rounded-full border px-2 py-0.5 text-xs; }
+
+.nav-sticky { @apply sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-800; }
+
+.table { @apply w-full text-left text-sm; }
+.table thead { @apply sticky top-[56px] bg-white/80 dark:bg-slate-900/80 backdrop-blur z-10; }
+.table th, .table td { @apply px-3 py-2; }
+.table tbody tr:nth-child(odd) { @apply bg-slate-50/40 dark:bg-slate-800/30; }
+
+a:focus-visible { @apply outline-none ring-2 ring-accent rounded; }
