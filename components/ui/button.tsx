@@ -1,4 +1,4 @@
-import { cva } from "classname-variants";
+import { cva } from "class-variance-authority";
 import { clsx } from "clsx";
 import * as React from "react";
 
