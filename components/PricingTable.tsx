@@ -16,10 +16,20 @@ export function PricingTable() {
       </div>
 
       <div className="overflow-x-auto relative">
+        {/* cover bar to prevent any bleed/click-through under the sticky header */}
+        <div className="absolute inset-x-0 top-0 h-5 bg-white dark:bg-slate-900 z-40 pointer-events-auto" />
+    
         <table className="table">
           <thead>
             <tr>
-              <th>Plan</th><th>vCPU</th><th>RAM</th><th>NVMe SSD</th><th>Bandwidth</th><th>Port</th><th>Price</th><th></th>
+              <th>Plan</th>
+              <th>vCPU</th>
+              <th>RAM</th>
+              <th>NVMe SSD</th>
+              <th>Bandwidth</th>
+              <th>Port</th>
+              <th>Price</th>
+              <th></th>
             </tr>
           </thead>
           <tbody className="relative z-0">
